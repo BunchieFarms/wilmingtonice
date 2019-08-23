@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { ContentRoutingModule } from './content/content-routing.module';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [ContentRoutingModule],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor(private router: Router) {
+    this.router.errorHandler = (error: any) => {
+      this.router.navigate(['']);
+      console.log(error);
+    };
+  }
+}

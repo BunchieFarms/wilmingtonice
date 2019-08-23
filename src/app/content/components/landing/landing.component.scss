@@ -1,0 +1,38 @@
+.carouselStyle {
+    height: 40vh;
+    width: 100%;
+}
+
+.carouselStyle img {
+    background-size: cover;
+    width: 100%;
+}
+
+.carousel-caption {
+    padding: 15px;
+    background-color: rgba($color: #525252, $alpha: 0.85);
+    border-radius: 4px;
+    color: #ffffff;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+}
+
+@media screen and (max-width: 767px) {
+    .carouselStyle {
+        height: 75vh;
+    }
+    .carouselStyle img {
+        height: 100%;
+    }
+}
+
+.card {
+    width: 100%;
+}
+
+.card-img-top {
+    width: auto;
+}
+
+.card-body a {
+    color: #fff;
+}

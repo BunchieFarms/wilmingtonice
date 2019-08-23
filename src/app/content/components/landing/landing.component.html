@@ -1,0 +1,44 @@
+<main role="main" class="ml-sm-auto px-0">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let data of carouselData; let firstChild = first" [class.active]='firstChild'>
+        <div class="carouselStyle"><img [src]='data.image'></div>
+        <div class="container">
+          <div class="carousel-caption text-center shadow">
+            <h1>{{data.title}}</h1>
+            <div [innerHTML]='data.body'></div>            
+            <p [hidden]='data.hideButton'><a class="btn btn-lg btn-primary" routerLink='data.buttonLink' role="button">{{data.button}}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</main>
+
+<div class="row mx-0 mt-5">
+  <div class="col-md-4" *ngFor="let data of cardData">
+    <div class="card">
+      <img [src]='data.image' class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{data.title}}</h5>
+        <p class="card-text">{{data.body}}</p>
+        <a routerLink='data.buttonLink' class="btn btn-primary">{{data.button}}</a>
+      </div>
+    </div>
+  </div>
+</div>
