@@ -13,7 +13,7 @@ export class AppComponent {
 
   menuItems = [
     { name: 'Schedules', link: 'schedules'},
-    { name: 'Online Registration', link: '#'},
+    { name: 'Online Registration', link: 'online-registration'},
     { name: 'Lessons', link: '#'},
     { name: 'Hockey', link: '#'},
     { name: 'Figure Skating', link: '#'},

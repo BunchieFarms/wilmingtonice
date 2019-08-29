@@ -18,7 +18,7 @@
   <div class="row">
     <div class="collapse w-100" id="mMenuCollapse">
       <div class="list-group-flush" *ngFor="let item of menuItems">
-        <a class="list-group-item list-group-item-action" (click)="changeRoute(item.link)" data-toggle="collapse" data-target="#mMenuCollapse">{{item.name}}</a>
+        <a class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#mMenuCollapse" (click)="changeRoute(item.link)">{{item.name}}</a>
       </div>
       <div id="address" class="list-group-item">
         <p>7201 Ogden Business Lane</p>
@@ -40,7 +40,7 @@
         </div>
 
         <div class="list-group-flush m-0" *ngFor="let item of menuItems">
-          <a class="list-group-item list-group-item-action" (click)="changeRoute(item.link)">{{item.name}}</a>
+          <a class="list-group-item list-group-item-action" routerLink='{{item.link}}'>{{item.name}}</a>
         </div>
       </div>
     </div>
